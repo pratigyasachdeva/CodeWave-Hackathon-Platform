@@ -5,13 +5,16 @@ import GameDevHackDetail from './pages/GameDevHackDetail'; // New page import
 import './styles/App.css';
 import Register from './pages/Register';
 
+
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/gamedev-hack" element={<GameDevHackDetail />} /> {/* New route */}
+        <Route path="/gamedev-hack" element={<GameDevHackDetail />} />
+         {/* New route */}
+          
       </Routes>
     </Router>
   );

@@ -1,13 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #0a0a16;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Moving Stars Background like First Theme */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(2px 2px at 20px 30px, #00f7ff, transparent),
+    radial-gradient(2px 2px at 40px 70px, #ff00c8, transparent),
+    radial-gradient(1px 1px at 90px 40px, #00ff95, transparent),
+    radial-gradient(1px 1px at 130px 80px, #ffeb3b, transparent),
+    radial-gradient(2px 2px at 200px 20px, #00f7ff, transparent),
+    radial-gradient(1px 1px at 160px 150px, #ff00c8, transparent),
+    radial-gradient(3px 3px at 280px 80px, #00ff95, transparent),
+    radial-gradient(2px 2px at 320px 200px, #ffeb3b, transparent),
+    radial-gradient(1px 1px at 50px 250px, #00f7ff, transparent),
+    radial-gradient(3px 3px at 150px 300px, #ff00c8, transparent);
+  background-repeat: repeat;
+  background-size: 400px 400px;
+  animation: starMove 25s linear infinite;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+@keyframes starMove {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(400px); }
+}
+
+/* Twinkling Stars */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(3px 3px at 60px 180px, #ffffff, transparent),
+    radial-gradient(2px 2px at 180px 280px, #ffffff, transparent),
+    radial-gradient(4px 4px at 300px 120px, #ffffff, transparent),
+    radial-gradient(2px 2px at 250px 350px, #ffffff, transparent),
+    radial-gradient(3px 3px at 120px 400px, #ffffff, transparent);
+  background-repeat: no-repeat;
+  animation: twinkle 3s ease-in-out infinite alternate;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.3; }
+  100% { opacity: 0.7; }
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Orbitron', 'Courier New', monospace;
+  color: #00f7ff;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/SidePanelProfile.css';
 
+
 const SidePanelProfile = ({ open, onClose }) => {
   if (!open) return null;
 

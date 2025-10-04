@@ -1,29 +1,90 @@
 .hackathon-card {
-  border: 2px solid #6c5ce7;
-  border-radius: 12px;
-  padding: 20px;
-  width: 350px;      /* fixed width to make square/rectangle */
-  height: 290px;     /* fixed height */
-  background-color: #f0f0ff;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 247, 255, 0.3);
+  border-radius: 20px;
+  padding: 25px;
+  width: 380px;
+  height: 320px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: transform 0.2s;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.hackathon-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 247, 255, 0.1), transparent);
+  transition: left 0.6s;
+}
+
+.hackathon-card:hover::before {
+  left: 100%;
 }
 
 .hackathon-card:hover {
-  transform: scale(1.05);   /* hover effect */
+  transform: translateY(-10px) scale(1.03);
+  border-color: #00f7ff;
+  box-shadow: 
+    0 15px 40px rgba(0, 247, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .hackathon-card h2 {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   text-align: center;
-  color: #6c5ce7;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, #00f7ff, #ff00c8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hackathon-card p {
   text-align: center;
-  margin: 5px 0;
+  margin: 8px 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 500;
+}
+
+/* Special highlight for important info */
+.hackathon-card p:first-of-type {
+  color: #00ff95;
+  font-weight: 600;
+}
+
+.hackathon-card p strong {
+  color: #ffeb3b;
+  font-weight: 600;
+}
+
+/* Status indicator */
+.hackathon-card::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #00ff95;
+  box-shadow: 0 0 10px #00ff95;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
 }
