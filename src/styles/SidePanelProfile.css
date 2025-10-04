@@ -1,0 +1,109 @@
+/* Overlay */
+.side-panel-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.417);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1500;
+}
+
+/* Panel */
+.side-panel {
+  width: 300px;
+  height: 100%;
+  background: rgba(255,255,255,0.1);   /* Glass effect */
+  backdrop-filter: blur(10px);
+  border-left: 1px solid rgba(255,255,255,0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  font-family: 'Poppins, sans-serif';
+}
+
+/* Profile header */
+.profile-header {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.profile-info h2 {
+  margin: 0;
+  color: #ffffff;
+  background: linear-gradient(135deg, #6f5febcd);
+
+}
+
+.profile-info p {
+  margin: 2px 0;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Cards */
+.profile-section {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 15px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+/* QR Card */
+.qr-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qr-code {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+}
+
+/* Settings button */
+.settings-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.settings-btn:hover {
+  transform: scale(1.05);
+}

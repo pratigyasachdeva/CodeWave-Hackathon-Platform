@@ -1,0 +1,144 @@
+.game-dev-page {
+  font-family: 'Poppins', sans-serif;
+  color: #857df4;
+  background: linear-gradient(135deg, #6c5ce729, #a29bfe7f);
+  padding: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.hero-title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #857df4;
+  text-shadow: 0 0 5px #fff, 0 0 10px #857df4;
+}
+
+
+/* Media Section */
+.media-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.video-placeholder {
+  width: 50%;
+  height: 450px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.352);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+/* Event Details */
+.event-details {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+.event-card {
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.1);
+  text-align: center;
+  margin: 10px;
+}
+.neon-card {
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 0 10px #6c5ce7;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.neon-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #a29bfe;
+}
+.icon {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Team Info */
+.team-info {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.team-size {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.avatars {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #a29bfe;
+}
+.avatar.male { background: #6c5ce7; }
+.avatar.female { background: #d2b1f9; }
+
+/* Prizes & Rounds */
+.prizes-rounds {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+.prizes-card {
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.1);
+  text-align: center;
+  font-weight: 600;
+}
+.rounds {
+  display: flex;
+  gap: 20px;
+}
+.round-card {
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.1);
+  text-align: center;
+}
+.badge {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #6b5cda7c, #a29bfe9b);
+  font-weight: bold;
+}
+
+/* Certificate CTA */
+.certificate-cta {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.download-btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(135deg, #6c5ce771, #a29bfeaa);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+.download-btn:hover {
+  transform: scale(1.05);
+}

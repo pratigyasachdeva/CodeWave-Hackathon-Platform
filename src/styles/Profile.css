@@ -1,0 +1,18 @@
+.profile {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.badges {
+  margin-top: 10px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #6c5ce7;
+  color: white;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
